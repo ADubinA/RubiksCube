@@ -198,6 +198,10 @@
 				if (action == GLFW_PRESS)
 					cube.setRotationAngle(-1);
 				break;
+			case GLFW_KEY_M:
+				if (action == GLFW_PRESS)
+					cube.Mix(30);
+				break;
 			default:
 				break;
 		}

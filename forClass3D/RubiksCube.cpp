@@ -3,6 +3,9 @@
 #include <iostream>
 #include "glm/gtx/string_cast.hpp"
 #include <math.h>
+#include <cstdlib>
+#include <time.h> 
+
 RubiksCube::RubiksCube()
 {
 	mesh = nullptr;
@@ -346,6 +349,50 @@ void RubiksCube::Draw()
 				shader->Update(getMVP(x,y,z), rotations[x][y][z]);
 				mesh->Draw();
 			}
+		}
+	}
+}
+
+void RubiksCube::Mix(int rotate_num)
+{
+	//srand(time(NULL));
+	int wall = 0;
+	rotation_angle = 90;
+	for (int i = 0; i < rotate_num; i++)
+	{
+		wall = rand() % 12;
+		switch (wall)
+		{
+			// R
+			case 0:
+			case 1: 
+				RotateWall(0, 0);
+				break;
+			// L
+			case 2:
+			case 3:
+				RotateWall(RUBIK_SIZE - 1, 0);
+				break;
+			// U
+			case 4:
+			case 5:
+				RotateWall(RUBIK_SIZE - 1, 1);
+				break;
+			// D
+			case 6:
+			case 7:
+				RotateWall(0, 1);
+				break;
+			// F
+			case 8:
+			case 9:
+				RotateWall(0, 2);
+				break;
+			// B
+			case 10:
+			case 11: 
+				RotateWall(RUBIK_SIZE - 1, 2);
+				break;
 		}
 	}
 }

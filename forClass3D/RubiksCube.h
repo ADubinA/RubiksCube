@@ -44,6 +44,7 @@ class RubiksCube {
 		void TranslateCube(glm::vec2 translate_pos);
 		void RotateWall(int wall_index, int axis);
 		void Draw();
+		void Mix(int rotate_num);
 
 		bool checkWall(int wall_index, int axis);
 
