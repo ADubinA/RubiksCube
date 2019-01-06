@@ -1,5 +1,7 @@
 # RubiksCube
 
+Written by: Almog Dubin & Reut Shmuel 
+
 A Rubik's cube implementation in opengl  
 How to use:
 R, L U, D, F, B rotate the walls of the cube
