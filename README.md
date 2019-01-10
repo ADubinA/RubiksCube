@@ -7,13 +7,18 @@ A Rubik's cube implementation in opengl
 How to use:
 
 R, L U, D, F, B rotate the walls of the cube.
+
 Z will divide the rotation angel by 2.
+
 A will multiply the rotation angel by 2 (up to 180).
+
 "space" will flip rotation direction.
 
 
 Mouse scroll will change the cube geometric size (zoom in and out).
+
 Left click will rotate the cube (globally).
+
 Right click will translate the cube.
 
 
