@@ -2,7 +2,7 @@
 
 Written by: Almog Dubin & Reut Shmuel 
 
-A Rubik's cube implementation in opengl 
+A Rubik's cube implementation in openGL
 
 How to use:
 
